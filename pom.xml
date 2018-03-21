@@ -13,5 +13,11 @@
 			<version>4.0.0</version>
 			<scope>provided</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.oracle.java/jre -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.oracle.java</groupId> -->
+<!-- 			<artifactId>jre</artifactId> -->
+<!-- 			<version>1.8.0_131</version> -->
+<!-- 		</dependency> -->
 	</dependencies>
 </project>
