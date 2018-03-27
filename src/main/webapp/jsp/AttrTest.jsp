@@ -22,5 +22,7 @@
 	application:<%=application.getAttribute("applicationAttr")%>
 	<br>
 	<a href="../jspBak/AttrTest1.jsp"> to AtteTest1.jsp</a>
+	<br>
+	<a href="../arrTest"> to Servlet arrTest</a>
 </body>
 </html>
