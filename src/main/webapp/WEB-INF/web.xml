@@ -21,4 +21,14 @@
     <servlet-name>helloJsp</servlet-name>
     <url-pattern>/helloWorld</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StudentServlset</display-name>
+    <servlet-name>StudentServlset</servlet-name>
+    <servlet-class>com.zym.jsp.StudentServlset</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentServlset</servlet-name>
+    <url-pattern>/jsp/studentServlset</url-pattern>
+  </servlet-mapping>
 </web-app>
