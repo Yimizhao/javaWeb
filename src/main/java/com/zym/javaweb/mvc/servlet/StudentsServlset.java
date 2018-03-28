@@ -23,13 +23,18 @@ public class StudentsServlset extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		  StudentDao dao = new StudentDao();
+		StudentDao dao = new StudentDao();
+//		 Object deleteId = request.getAttribute("deleteId");
+		String deleteId = (String)request.getParameter("deleteId");
+		 if ((deleteId != null)) {
+			int Id = Integer.parseInt(deleteId);
+			dao.deleteStudent(Id);
+		}
+		
 		  List<Student> students = dao.getAllStudent();
 		  request.setAttribute("students", students);
 		  String path = "students.jsp";
 		  request.getRequestDispatcher(path).forward(request, response);
-		
-		
 	}
 
 }
