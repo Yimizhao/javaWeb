@@ -1,6 +1,5 @@
 package com.zym.javaweb.DB;
 
-import static org.junit.Assert.*;
 
 import java.sql.Connection;
 import java.sql.SQLException;
