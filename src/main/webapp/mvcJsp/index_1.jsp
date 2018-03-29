@@ -1,7 +1,7 @@
+<%@page import="com.zym.javaweb.mvc.domain.Customer"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
-    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -44,44 +44,51 @@
 	</form>
 	
 	<br><br>
-	
-	<c:if test="${!empty requestScope.customers }">
 
-		<hr>	
-		<br><br>
+	<% 
+		List<Customer> customers = (List<Customer>)request.getAttribute("customers");
+		if(customers != null && customers.size() > 0){
+	
+	%>
+
+	<hr>	
+	<br><br>
 	 
 		<table border="1" cellpadding="10" cellspacing="0">
 			<tr>
-				<th>^ID</th>
+				<th>ID</th>
 				<th>CustomerName</th>
 				<th>Address</th>
 				<th>Phone</th>
 				<th>UPDATE\DELETE</th>
 			</tr>
 			
-			<c:forEach items="${requestScope.customers }" var="cust">
+			<% 
+				for(Customer customer: customers){
+			%>
 					
 					<tr>
-						<td>${cust.id }</td>
-						<td>${cust.name }</td>
-						<td>${cust.address }</td>
-						<td>${cust.phone }</td>
+						<td><%= customer.getId() %></td>
+						<td><%= customer.getName() %></td>
+						<td><%= customer.getAddress() %></td>
+						<td><%= customer.getPhone() %></td>
 						<td>
-							<c:url value="/edit.do" var="editurl">
-								<c:param name="id" value="${cust.id }"></c:param>
-							</c:url>
-							<a href="${editurl }">UPDATE</a>
-							<c:url value="/delete.do" var="deleteurl">
-								<c:param name="id" value="${cust.id }"></c:param>
-							</c:url>
-							<a href="${deleteurl }" class="delete">DELETE</a>
+							<a href="edit.do?id=<%= customer.getId() %>">UPDATE</a>
+							<a href="delete.do?id=<%= customer.getId() %>" class="delete">DELETE</a>
 						</td>
 					</tr>
-			
-			</c:forEach>
+					
+			<%		
+				}
+			%>
 			
 		</table>
-	</c:if>
+
+	<%		
+		}
+	%>
+	
+	
 	
 </body>
 </html>

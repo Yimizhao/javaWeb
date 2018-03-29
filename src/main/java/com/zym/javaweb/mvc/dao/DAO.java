@@ -9,6 +9,7 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import com.zym.javaweb.mvc.DB.JdbcUtils;
+import com.zym.javaweb.mvc.utils.ReflectionUtils;
 
 
 /**
@@ -25,7 +26,7 @@ public class DAO<T> {
 	
 	public DAO() {
 		
-//		clazz = ReflectionUtils.getSuperGenericType(getClass());
+		clazz = ReflectionUtils.getSuperGenericType(getClass());
 		
 		/*
 		System.out.println("DAO's construtor...");

@@ -1,7 +1,15 @@
 package com.zym.javaweb.mvc.domain;
 
 public class Customer {
-	private int id;
+	Integer id;
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	private String name;
 	private String address;
 	private String phone;
@@ -9,19 +17,10 @@ public class Customer {
 	public Customer() {
 	}
 
-	public Customer(int id, String name, String address, String phone) {
-		this.id = id;
+	public Customer(String name, String address, String phone) {
 		this.name = name;
 		this.address = address;
 		this.phone = phone;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getName() {
