@@ -15,7 +15,7 @@ import com.zym.javaweb.mvc.domain.Student;
 /**
  * Servlet implementation class StudentsServlset
  */
-@WebServlet("/studentsServlset")
+@WebServlet("/mvcJsp/studentsServlset")
 public class StudentsServlset extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -28,8 +28,6 @@ public class StudentsServlset extends HttpServlet {
 		  request.setAttribute("students", students);
 		  String path = "students.jsp";
 		  request.getRequestDispatcher(path).forward(request, response);
-		
-		
 	}
 
 }
