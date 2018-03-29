@@ -6,6 +6,8 @@ import java.sql.SQLException;
 
 import org.junit.Test;
 
+import com.zym.javaweb.mvc.DB.JdbcUtils;
+
 public class JdbcUtilsTest {
 
 	@Test

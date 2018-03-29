@@ -1,4 +1,4 @@
-package com.zym.javaweb.DB;
+package com.zym.javaweb.mvc.DB;
 import java.sql.Connection;
 import java.sql.SQLException;
 

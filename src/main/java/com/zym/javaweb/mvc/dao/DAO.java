@@ -8,7 +8,8 @@ import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
-import com.zym.javaweb.DB.JdbcUtils;
+import com.zym.javaweb.mvc.DB.JdbcUtils;
+
 
 /**
  * 封装了基本的 CRUD 的方法, 以供子类继承使用
