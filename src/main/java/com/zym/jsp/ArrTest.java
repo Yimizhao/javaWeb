@@ -34,17 +34,17 @@ public class ArrTest extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		PrintWriter out = response.getWriter();
-		// 1°¢pageContext
+		// 1„ÄÅpageContext
 		
-		// 2°¢request
+		// 2„ÄÅrequest
 		Object requestAttr = request.getAttribute("requestAttr");
 		out.println("requestAttr :" + requestAttr);
 		
-		// 3°¢session
+		// 3„ÄÅsession
 		Object sessionAttr = request.getSession().getAttribute("sessionAttr");
 		out.println("sessionAttr :" + sessionAttr);
 		
-//		 4°¢application
+//		 4„ÄÅapplication
 		Object applicationAttr = request.getServletContext().getAttribute("applicationAttr");
 		out.println("applicationAttr:" + applicationAttr);
 	}

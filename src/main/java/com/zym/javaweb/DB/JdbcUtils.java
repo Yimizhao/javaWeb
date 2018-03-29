@@ -7,12 +7,12 @@ import javax.sql.DataSource;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 /**
- * JDBC ²Ù×÷µÄ¹¤¾ßÀà
+ * JDBC æ“ä½œçš„å·¥å…·ç±»
  */
 public class JdbcUtils {
 
 	/**
-	 * ÊÍ·Å Connection Á¬½Ó
+	 * é‡Šæ”¾ Connection è¿æ¥
 	 * @param connection
 	 */
 	public static void releaseConnection(Connection connection){
@@ -28,12 +28,12 @@ public class JdbcUtils {
 	private static DataSource dataSource = null;
 	
 	static{
-		//Êı¾İÔ´Ö»ÄÜ±»´´½¨Ò»´Î. 
+		//æ•°æ®æºåªèƒ½è¢«åˆ›å»ºä¸€æ¬¡. 
 		dataSource = new ComboPooledDataSource("mvcapp");
 	}
 	
 	/**
-	 * ·µ»ØÊı¾İÔ´µÄÒ»¸ö Connection ¶ÔÏó
+	 * è¿”å›æ•°æ®æºçš„ä¸€ä¸ª Connection å¯¹è±¡
 	 * @return
 	 * @throws SQLException  
 	 */
