@@ -12,14 +12,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h5>学生信息页面</h5>
-	<table>
+	<h1>学生信息页面</h1>
+	<table border="1" cellpadding="10" cellspacing="0">
 		<tr>
 			<th>Id</th>
 			<th>name</th>
 			<th>location</th>
 			<th>gender</th>
 			<th>grade</th>
+			<th>删除</th>
 		</tr>
 		<%
 			List<Student> studentsList;
@@ -33,6 +34,7 @@
 			<td><%=student.getLocation()%></td>
 			<td><%=student.getGender()%></td>
 			<td><%=student.getGrade()%></td>
+			<td><a href="studentsServlset?deleteId=<%=student.getId()%>">delete</a></td>
 		</tr>
 		<%
 			}

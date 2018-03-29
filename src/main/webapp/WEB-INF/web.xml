@@ -31,14 +31,15 @@
     <servlet-name>StudentServlset</servlet-name>
     <url-pattern>/jsp/studentServlset</url-pattern>
   </servlet-mapping>
-<!--   <servlet> -->
-<!--     <description></description> -->
-<!--     <display-name>studentsServlset</display-name> -->
-<!--     <servlet-name>studentsServlset</servlet-name> -->
-<!--     <servlet-class>com.zym.javaweb.mvc.servlet.StudentsServlset</servlet-class> -->
-<!--   </servlet> -->
-<!--   <servlet-mapping> -->
-<!--     <servlet-name>studentsServlset</servlet-name> -->
-<!--     <url-pattern>/mvcJsp/studentsServlset</url-pattern> -->
-<!--   </servlet-mapping> -->
+  <servlet>
+    <description></description>
+    <display-name>studentsServlset</display-name>
+    <servlet-name>studentsServlset</servlet-name>
+    <servlet-class>com.zym.javaweb.mvc.servlet.StudentsServlset</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>studentsServlset</servlet-name>
+    <url-pattern>/mvcJsp/studentsServlset</url-pattern>
+  </servlet-mapping>
+
 </web-app>

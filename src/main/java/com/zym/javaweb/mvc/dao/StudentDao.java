@@ -64,4 +64,37 @@ public class StudentDao {
 		}
 		return students;
 	}
+	public void deleteStudent(int Id) {
+		String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+		String USER = "root";
+		String PASSWORD = "123456";
+		String DB_URL = "jdbc:mysql://localhost:3306/atguigu?serverTimezone=UTC";
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		try {
+			Class.forName(JDBC_DRIVER);
+//			ResultSet resultSet;
+			String sql = "delete FROM student WHERE Id =" + Id;
+			connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			try {
+				if (preparedStatement != null) {
+					preparedStatement.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 }
