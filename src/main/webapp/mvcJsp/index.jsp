@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="/scripts/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../scripts/jquery-1.7.2.js"></script>
 <script type="text/javascript">
 	
 	$(function(){
@@ -67,11 +67,11 @@
 						<td>${cust.address }</td>
 						<td>${cust.phone }</td>
 						<td>
-							<c:url value="/edit.do" var="editurl">
+							<c:url value="/mvcJsp/edit.do" var="editurl">
 								<c:param name="id" value="${cust.id }"></c:param>
 							</c:url>
 							<a href="${editurl }">UPDATE</a>
-							<c:url value="/delete.do" var="deleteurl">
+							<c:url value="/mvcJsp/delete.do" var="deleteurl">
 								<c:param name="id" value="${cust.id }"></c:param>
 							</c:url>
 							<a href="${deleteurl }" class="delete">DELETE</a>
