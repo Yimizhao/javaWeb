@@ -25,6 +25,7 @@
 	hello:<%=username%>
 	<br>
 	<br>
+	
 	<a href="login.jsp">重新登录</a>
 	<br><br>
 	<a href="logput.jsp">注销 </a>
