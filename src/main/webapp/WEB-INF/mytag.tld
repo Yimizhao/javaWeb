@@ -55,11 +55,27 @@
 		<name>printUpper</name>
 		<tag-class>com.zym.javaweb.mvc.tag.PrintUpper</tag-class>
 		<body-content>scriptless</body-content>
-		
+
 		<attribute>
 			<name>count</name>
 			<required>true</required>
 			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>forEach</name>
+		<tag-class>com.zym.javaweb.mvc.tag.ForEach</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>items</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
 		</attribute>
 	</tag>
 </taglib>
