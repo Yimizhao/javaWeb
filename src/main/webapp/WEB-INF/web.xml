@@ -36,6 +36,29 @@
 	<servlet-mapping>
 		<servlet-name>validateColorServlet</servlet-name>
 		<url-pattern>/validateColorServlet</url-pattern>
-
 	</servlet-mapping>
+	<filter>
+		<filter-name>usernameFilter</filter-name>
+		<filter-class>com.zym.javaweb.filter.UserNameFilter</filter-class>
+		<init-param>
+			<param-name>username</param-name>
+			<param-value>Tom</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>usernameFilter</filter-name>
+		<url-pattern>/filter/hello.jsp</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>passwordFilter</filter-name>
+		<filter-class>com.zym.javaweb.filter.PassWordFilter</filter-class>
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>1234</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>passwordFilter</filter-name>
+		<url-pattern>/filter/hello.jsp</url-pattern>
+	</filter-mapping>
 </web-app>
