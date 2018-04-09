@@ -27,29 +27,29 @@
 
 	<br>
 	<%
-// 		List<Customer> customers = new ArrayList<Customer>();
-// 		customers.add(new Customer("AAA", "aaa", "111"));
-// 		customers.add(new Customer("BBB", "bbb", "222"));
-// 		customers.add(new Customer("CCC", "ccc", "333"));
-// 		customers.add(new Customer("DDD", "ddd", "444"));
-// 		customers.add(new Customer("EEE", "eee", "555"));
-// 		request.setAttribute("customers", customers);
+		// 		List<Customer> customers = new ArrayList<Customer>();
+		// 		customers.add(new Customer("AAA", "aaa", "111"));
+		// 		customers.add(new Customer("BBB", "bbb", "222"));
+		// 		customers.add(new Customer("CCC", "ccc", "333"));
+		// 		customers.add(new Customer("DDD", "ddd", "444"));
+		// 		customers.add(new Customer("EEE", "eee", "555"));
+		// 		request.setAttribute("customers", customers);
 		Map<Integer, Customer> customers = new HashMap<Integer, Customer>();
 		customers.put(1, new Customer("AAA", "aaa", "111"));
-		customers.put(2,new Customer("BBB", "bbb", "222"));
-		customers.put(3,new Customer("CCC", "ccc", "333"));
-		customers.put(5,new Customer("EEE", "eee", "555"));
-		customers.put(9,new Customer("DDD", "ddd", "444"));
+		customers.put(2, new Customer("BBB", "bbb", "222"));
+		customers.put(3, new Customer("CCC", "ccc", "333"));
+		customers.put(5, new Customer("EEE", "eee", "555"));
+		customers.put(9, new Customer("DDD", "ddd", "444"));
 		request.setAttribute("customers", customers);
 	%>
-	
-<%-- 	<zym:forEach items="${requestScope.customers }" var="customer"> --%>
+
+	<%-- 	<zym:forEach items="${requestScope.customers }" var="customer"> --%>
 	<zym:forEach items="${customers }" var="customer">
 	${customer.key} -- ${customer.value.name} -- ${customer.value.address} -- 	${customer.value.phone}
 <%-- 	${customer.name} -- ${customer.address} -- 	${customer.phone} --%>
-	<br>
+		<br>
 	</zym:forEach>
-<%-- 	${fn:length(param.name) } --%>
-${zym:length((String)param.name) }
+	<%-- 	${fn:length(param.name) } --%>
+	${zym:length((String)param.name) }
 </body>
 </html>
