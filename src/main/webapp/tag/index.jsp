@@ -49,7 +49,14 @@
 <%-- 	${customer.name} -- ${customer.address} -- 	${customer.phone} --%>
 		<br>
 	</zym:forEach>
-	<%-- 	${fn:length(param.name) } --%>
-	${zym:length((String)param.name) }
+		${fn:length(param.name) }
+<%-- 	${zym:length(param.name) } --%>
+	<br>
+	<c:set var="age" value="20" scope="request"></c:set>
+	<c:if test="${requestScope.age  >= 18}"> 成年了</c:if>
+	<c:choose>
+		<c:when test=""></c:when>
+		<c:otherwise></c:otherwise>
+	</c:choose>
 </body>
 </html>

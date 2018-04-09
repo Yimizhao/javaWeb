@@ -81,6 +81,6 @@
 	<function>
 		<name>length</name>
 		<function-class>com.zym.javaweb.mvc.tag.MyElFuction</function-class>
-		<function-signature>int length(java.lang.String var)</function-signature>
+		<function-signature>int length(java.lang.Object var)</function-signature>
 	</function>
 </taglib>
