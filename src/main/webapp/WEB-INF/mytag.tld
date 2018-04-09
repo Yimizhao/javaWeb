@@ -78,4 +78,9 @@
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
 	</tag>
+	<function>
+		<name>length</name>
+		<function-class>com.zym.javaweb.mvc.tag.MyElFuction</function-class>
+		<function-signature>int length(java.lang.String var)</function-signature>
+	</function>
 </taglib>
