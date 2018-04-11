@@ -46,5 +46,5 @@ public abstract class HttpFilter implements Filter {
 	public void init() {
 	}
 
-	public abstract void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain);
+	public abstract void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException;
 }
