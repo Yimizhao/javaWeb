@@ -28,9 +28,12 @@ public abstract class HttpFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
 			throws IOException, ServletException {
-		// TODO Auto-generated method stub
 		HttpServletRequest request;
 		HttpServletResponse response;
+		
+		if (!(req instanceof HttpServletRequest && res instanceof HttpServletResponse)) {
+			throw new ServletException("non-HTTP request or response");
+		}
 		request = (HttpServletRequest) req;
 		response = (HttpServletResponse) res;
 		doFilter(request, response, chain);
