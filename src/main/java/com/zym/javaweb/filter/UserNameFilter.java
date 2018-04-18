@@ -40,5 +40,10 @@ public class UserNameFilter implements Filter {
 		// TODO Auto-generated method stub
 		this.filterConfig = filterConfig;
 	}
+	
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+	}
 
 }

@@ -65,4 +65,13 @@
 		<filter-name>passwordFilter</filter-name>
 		<url-pattern>/filter/hello.jsp</url-pattern>
 	</filter-mapping>
+	<listener>
+		<listener-class>com.zym.javaweb.listener.HelloSeverletContextListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.zym.javaweb.listener.HelloServletRequestListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.zym.javaweb.listener.HelloHttpSessionListener</listener-class>
+	</listener>
 </web-app>

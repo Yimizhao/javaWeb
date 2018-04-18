@@ -16,13 +16,13 @@ public class PassWordFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		HttpServletRequest res= (HttpServletRequest)request;
+		HttpServletRequest res = (HttpServletRequest) request;
 		// 获取页面name
 		String password = res.getParameter("password");
 		// 获取固定name
 		String initpassword = this.filterConfig.getInitParameter("password");
 		if (password != null && password.equals(initpassword)) {
-			
+
 			res.removeAttribute("MSG");
 			chain.doFilter(request, response);
 		} else {
@@ -36,6 +36,12 @@ public class PassWordFilter implements Filter {
 	public void init(FilterConfig filterConfig) throws ServletException {
 		// TODO Auto-generated method stub
 		this.filterConfig = filterConfig;
+	}
+
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+
 	}
 
 }
