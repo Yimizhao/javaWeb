@@ -25,7 +25,6 @@ public class EnCodeFilter extends HttpFilter {
 	public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		// TODO Auto-generated method stub
-		System.err.println("encode");
 		request.setCharacterEncoding(encoding);
 		chain.doFilter(request, response);
 	}
