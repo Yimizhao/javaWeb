@@ -1,11 +1,10 @@
-package com.zym.javaweb.fileupload;
+package com.zym.javaweb.fileupload.servlet;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,8 +19,8 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 /**
  * Servlet implementation class FileUploadServlet
  */
-@WebServlet("/fileUploadServlet")
-public class FileUploadServlet extends HttpServlet {
+//@WebServlet("/fileUploadServlet")
+public class FileUploadServlet_bak extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
